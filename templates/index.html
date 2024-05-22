@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>
+            Welcome to PetFax!
+        </h1>
+        <div>
+            Here are the pets that are currently available for adoption
+        </div>
+        <div class="pet-container">
+            {% for pet in pets %}
+            <div class="pet">
+                <h2>{{ pet.pet_name }}</h2>
+                <img src="{{pet.pet_photo}}" />
+                <a href="/pets/{{ pet.pet_id }}">Facts about me.</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
